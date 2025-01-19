@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Arial", sans-serif;
+        }
+
+        .bgimg {
+            background-image: url('Image/aurora-borealis-northern-lights-snowy-field-scenery-4k-wallpaper-uhdpaper.com-152@2@a.jpg');
+            background-size: cover;
+            background-position: center;
+            height: calc(100vh - 100px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            animation: backgroundMove 10s infinite alternate;
+        }
+
+        .navbar {
+            overflow:hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: red;
+            transform: scale(1.1);
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            transition: background-color 0.3s ease, transform 1s ease;
+        }
+        .dropdown:hover .dropdown-content,
+        .dropdown-content:hover {
+            display: block;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px; 
+    animation: fadeIn 0.3s ease;
+}
+
+        .dropdown-content a {
+            float: none;
+            background-color: black;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f10c0c;
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar a, .dropdown .dropbtn {
+                width: 50%;
+                text-align: left;
+                padding: 16px 14px;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                width: 50%;
+            }
+
+            .dropdown-content a {
+                padding: 14px 16px;
+            }
+        }
+
+        .description {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px 40px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: center top; }
+            100% { background-position: center bottom; }
+        }
+
+        .description h1 {
+            font-size: 4rem;
+            margin: 0 0 20px 0;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6a00, #fef5f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glowingText 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowingText {
+            0% {
+                text-shadow: 0 0 5px rgba(252, 252, 252, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7);
+            }
+            100% {
+                text-shadow: 0 0 10px rgb(118, 114, 116), 0 0 20px rgb(198, 196, 197), 0 0 30px rgb(255, 255, 255);
+            }
+        }
+
+        .description p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 0;
+            font-style: italic;
+            animation: fadeInText 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    flex-wrap: wrap; 
+}
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown .dropbtn:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown {
+        width: 100%; 
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%; 
+    }
+
+    .dropdown-content a {
+        padding: 12px 20px;
+    }
+}
+        .footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position:relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="nav bar/projek.html">Project</a>
+        <a href="about us/nico.html">Tentang saya</a>
+        <div class="dropdown">
+            <button class="dropbtn">Mata Kuliah</button>
+            <div class="dropdown-content">
+                <a href="matkul/fisika.html">Fisika</a>
+                <a href="matkul/Dasar_pemrograman.html">Dasar Pemrograman</a>
+                <a href="matkul/dasar_komputasi.html">Dasar-Dasar Komputasi</a>
+                <a href="matkul/Kalkulus.html">Kalkulus</a>
+            </div>
+        </div>
+        <a href="nav bar/ospek.html">Dinus Inside</a>
+    </div>
+
+    <div class="bgimg">
+        <div class="description">
+            <h1>Welcome to My Web</h1>
+            <p>Nicko Galang Anarki</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; @2024. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

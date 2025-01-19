@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Showcase</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      height: 100%;
+    }
+
+    .home-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 15px 30px;
+      background-color: #007acc;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid transparent;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1000;
+    }
+
+    .home-button:hover {
+      background-color: #005fa3;
+      transform: scale(1.1) rotate(10deg);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .image-container {
+      flex: 0 0 40%;
+      padding: 10px;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-container {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .text-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+
+    .text-container p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #000000;
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      font-size: 16px;
+      text-decoration: none;
+      color: white;
+      background-color: #007acc;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #005fa3;
+    }
+
+    @media screen and (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .image-container, .text-container {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <a href="../index.html" class="home-button">Back</a>
+  <div class="container">
+
+    <!-- Project 1 -->
+    <div class="section">
+      <div class="image-container">
+        <img src="https://i.ibb.co.com/CzFsg6S/penginstalan-Debian-10-dan-VOIP-You-Tube-Google-Chrome-19-01-2025-14-23-20.png" alt="Project 1">
+      </div>
+      <div class="text-container">
+        <h2>Project 1: Penginstalan Debian 10 dan VOIP</h2>
+        <p>Saya dan kelompok kelas pernah membuat sebuah tutorial tentang instalasi Asterisk menggunakan VirtualBox. 
+          Setelah berhasil menginstal Asterisk di Debian, dilanjutkannya dengan konfigurasi 
+          jaringan untuk mengatur IP agar perangkat HP dan laptop dapat terhubung. Pada HP, 
+          kami menggunakan aplikasi Zoiper, sedangkan di laptop, kami menggunakan aplikasi MicroSIP.</p>
+        <div class="buttons">
+          <a href="https://youtu.be/R8ssQYQCdsY?si=efFemPZ2OZAISXXf" target="_blank">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="section">
+      <div class="image-container">
+        <img src="../Image/THREE IN ONE GAMES - Presentation - Google Chrome 19_01_2025 22_42_49.png" alt="Project 2">
+      </div>
+      <div class="text-container">
+        <h2>Project 2: Three in One Games</h2>
+        <p>Nicko Galang Anarki||NIM: A11.2024.15690||UDINUS|| Sebuah Proyek kelompok yang dikerjakan 3 orang ini membuat sebuah game yang dimana pemain dapat
+          memilih 1 dari 3 game yang tersedia. Game yang tersedia adalah jankenpon, tic-tac-toe, dan tebak angka
+        </p>
+        <div class="buttons">
+          <a href="https://drive.google.com/file/d/1-bzUp48N4aKSaGI8-hUYENI0XuuVI58m/view?usp=sharing" target="_blank">Video</a>
+          <a href="https://github.com/Nickssrk/Three-in-one-games" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="section">
+      <div class="image-container">
+        <img src="../Image/WhatsApp Image 2025-01-19 at 19.32.50.jpeg" alt="Project 3">
+      </div>
+      <div class="text-container">
+        <h2>Project 3: Kalkulator Tabung</h2>
+        <p>Nicko Galang Anarki||NIM: A11.2024.15690||UDINUS|| Sebuah proyek yang dapat menghitung volume tabung, keliling lingkaran,luas permukaan dan luas kedua 
+          atap tabung, dengan menggunakan bahasa pemrograman C++( ADT, Fungsi parameter, Prosedural,) 
+          serta cara mengecek validasi input dari pengguna agar program tidak error saat berjalan.</p>
+        <div class="buttons">
+          <a href="https://drive.google.com/file/d/1AMZweOR4mZ6h8MN5tq1j8NTZHudcGnCI/view?usp=sharing" target="_blank">Video</a>
+          <a href="https://github.com/Nickssrk/Perhitungan-Tabung" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024. All Rights Reserved.</p>
+  </div>
+</body>
+</html>

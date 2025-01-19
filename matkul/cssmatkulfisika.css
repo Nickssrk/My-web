@@ -1,0 +1,177 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+
+body {
+    background: url('https://i.ibb.co.com/ZmhkmBw/wallpaperbetter.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: backgroundMove 10s infinite alternate;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown .dropbtn:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    background-color: black;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f10c0c;
+    transform: scale(1.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+.image-container {
+    flex: 0 0 40%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.content {
+  
+    background: rgba(26, 25, 25, 0.7);             
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(237, 225, 225);
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgb(218, 201, 201);
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+@keyframes backgroundMove {
+    0% { background-position: center top; }
+    100% { background-position: center bottom; }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .image-container, .content {
+        flex: 0 0 100%;
+    }
+}
+
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
